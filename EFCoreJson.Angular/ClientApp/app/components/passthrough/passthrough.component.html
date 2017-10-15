@@ -1,0 +1,50 @@
+<h1>Pass Through Form</h1>
+
+<p>This component demonstrates passing JSON through the server to SQL</p>
+
+<p *ngIf="!formModel"><em>Loading...</em></p>
+
+<form *ngIf="formModel" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="employeeId">Employee Id</label>
+        <input type="text" name="employeeId" id="employeeId" class="form-control" [(ngModel)]="formModel.employeeId" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" class="form-control" [(ngModel)]="formModel.firstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="employeeId">Last Name</label>
+        <input type="text" name="lastName" id="lastName" class="form-control" [(ngModel)]="formModel.lastName" />
+    </div>
+
+    <div class="form-group">
+        <label for="employeeId">Start Date</label>
+        <input type="date" name="startDate" id="startDate" class="form-control" [(ngModel)]="formModel.startDate" />
+    </div>
+
+    <div class="form-group">
+        <label for="employeeId">Terminated On</label>
+        <input type="date" name="terminatedOn" id="terminatedOn" class="form-control" [(ngModel)]="formModel.terminatedOn" />
+    </div>
+
+    <div class="form-group">
+        <label for="employeeId">Termination Reason</label>
+        <textarea name="terminationReason" id="terminationReason" class="form-control" [(ngModel)]="formModel.terminationReason"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+<div class="form-group">
+    <label for="submittedState">Submitted</label>
+    <span name="submittedState" id="submittedState">{{formState.isSubmitted}}</span>
+</div>
+ 
+<div class="form-group">
+    <label for="errorState">Is Error</label>
+    <span name="errorState" id="errorState">{{formState.isErrorState}}</span>
+</div>
