@@ -20,6 +20,16 @@ When the project is started in debug mode, HMR is set up to watch for changes to
 
 Once the project is running you can use PostMan or similar REST client to look at CRUD operators against the Json* Controllers. The sample Angular code currently is create-only (I'm not an Agular developer myself and haven't had someone to collaborate with). The Angular components are more useful in demonstrating this isolation of schema changes. After running the application try making a change to the FormModel, add new form elements and submit. Look at what the services and database receive.
 
+## Resources
+
+[Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+
+[SQL Server JSON Support](https://docs.microsoft.com/en-us/sql/relational-databases/json/json-data-sql-server) (SQL Server 2016 or higher)
+
+[Mock Data Generator](https://www.mockaroo.com/)
+
+[Angular Forms](https://angular.io/guide/forms)
+
 ## Feedback
 
 Feedback is welcome. File issues or pull requests for new features or ping me on Twitter @ErikNoren.
